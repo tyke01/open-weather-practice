@@ -2,10 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import Weather from "./Components/Weather";
 
+const API_KEY = import.meta.env.VITE_API_KEY
+
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-  const API_KEY = "bec2d7db7e735dbfa43cfac938a2991b";
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`;
 

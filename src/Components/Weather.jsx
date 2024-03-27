@@ -1,5 +1,4 @@
-
-
+// 
 
 const Weather = ({ weatherData }) => {
   return (
@@ -10,7 +9,12 @@ const Weather = ({ weatherData }) => {
             <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
               <div className="flex flex-col items-start justify-between h-full">
                 <div>
-                  <p className="text-xl">{weatherData.name}, {weatherData.sys.country}</p>
+                  <p className="text-xl">
+                    {weatherData.name}, {weatherData.sys.country}
+                  </p>
+                  <p className="text-sm">
+                    {weatherData.weather[0].description}
+                  </p>
                 </div>
               </div>
             </div>
